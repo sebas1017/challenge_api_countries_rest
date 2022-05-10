@@ -64,6 +64,17 @@ pero en un archivo JSON
 si desea tambien puede realizar la solicitud GET desde la linea de comandos 
 > curl http://127.0.0.1:8000/
 
+
+
+para ejecutar los tests he implementado un script en bash que hace peticiones basicas a la api
+mientras esta en funcionamiento , para ejecutarlo ir a la ruta instance/test_api.sh
+
+este script debe ser ejecutado mientras la api esta en localhost corriendo, bien sea 
+atraves de docker o de forma local con las instrucciones anteriormente nombradas
+tambien se debe tener en cuenta que se captura la excepcion en caso de que la API
+externa no responda el JSON adecuado ya que he notado que al hacer peticiones desde la misma maquina existen ocasiones en las que el json retornado es diferente , para lo cual
+solo debe recargar la API y para lo cual desde el codigo he controlado con un lapso de tiempo
+entre peticion y excepciones , saludos!!
 # FUNCIONAMIENTO
 ![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/main/images_demo/APIREST.png?raw=true)
 ![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/main/images_demo/DATABASE.png?raw=true)
