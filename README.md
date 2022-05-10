@@ -45,7 +45,7 @@ si desea tambien puede realizar la solicitud GET desde la linea de comandos
 
 
 # DISEÑO DE LA SOLUCION 
-![alt text](https://github.com/sebas1017/tangelo_challenge_api/tree/blob/images_demo/PROCESS_DIAGRAM_API.png?raw=true)
+![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/images_demo/PROCESS_DIAGRAM_API.png?raw=true)
 
 
 La solucion planteada la defini desde un servidor HTTP simple en python3 creando este , tenemos un endpoint que se encuentra en la raiz de la direccion local , puerto 8000(se puede cambiar en caso de que tengan el puerto ocupado)
