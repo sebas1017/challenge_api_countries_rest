@@ -40,11 +40,11 @@ si desea tambien puede realizar la solicitud GET desde la linea de comandos
 > curl http://127.0.0.1:8000/
 
 # FUNCIONAMIENTO
-![alt text](https://github.com/sebas1017/Challenge-Python-L1/blob/main/images_demo/APIREST.png?raw=true)   ![alt text](https://github.com/sebas1017/Challenge-Python-L1/blob/main/images_demo/DATABASE.png?raw=true)
+![alt text](https://github.com/sebas1017/tangelo_challenge_api/tree/main/images_demo/APIREST.png?raw=true)   ![alt text](https://github.com/sebas1017/tangelo_challenge_api/tree/main/images_demo/DATABASE.png?raw=true)
 
 
 # DISEÑO DE LA SOLUCION 
-![alt text](https://github.com/sebas1017/Challenge-Python-L1/blob/main/images_demo/PROCESS_DIAGRAM_API.png?raw=true)
+![alt text](https://github.com/sebas1017/tangelo_challenge_api/tree/main/images_demo/PROCESS_DIAGRAM_API.png?raw=true)
 
 
 La solucion planteada la defini desde un servidor HTTP simple en python3 creando este , tenemos un endpoint que se encuentra en la raiz de la direccion local , puerto 8000(se puede cambiar en caso de que tengan el puerto ocupado)
