@@ -67,7 +67,9 @@ si desea tambien puede realizar la solicitud GET desde la linea de comandos
 
 
 para ejecutar los tests he implementado un script en bash que hace peticiones basicas a la api
-mientras esta en funcionamiento , para ejecutarlo ir a la ruta instance/test_api.sh
+mientras esta en funcionamiento , para ejecutarlo ir a la ruta instance/test_api.sh con el comando
+
+sh test_api.sh
 
 este script debe ser ejecutado mientras la api esta en localhost corriendo, bien sea 
 atraves de docker o de forma local con las instrucciones anteriormente nombradas
