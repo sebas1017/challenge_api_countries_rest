@@ -6,7 +6,7 @@
 
 ![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/main/images_demo/heroku.png?raw=true)
 
-
+actualmente puede ver desplegada la api en https://api-countries-http.herokuapp.com/
 Servidor HTTP simple sin uso de frameworks(flask ,django, etc)
 
 Este servidor responde a solicitudes tipo GET de acuerdo a las especificaciones solo tenemos un endpoint el cual a su vez consume una API REST externa para
