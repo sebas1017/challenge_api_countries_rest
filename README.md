@@ -50,7 +50,7 @@ si desea tambien puede realizar la solicitud GET desde la linea de comandos
 
 La solucion planteada la defini desde un servidor HTTP simple en python3 creando este , tenemos un endpoint que se encuentra en la raiz de la direccion local , puerto 8000(se puede cambiar en caso de que tengan el puerto ocupado)
 al realizar una solicitud de tipo GET al endpoint este a su vez ejecuta el llamado a la APIREST externa  https://rapidapi.com/apilayernet/api/rest-countries-v1  desde la cual esta misma cuenta con un endpoint el cual es :
->https://restcountries-v1.p.rapidapi.com/all  y luego se hace el llamado a los datos por region en el siguiente endpoint   https://restcountries.eu/rest/v2/region/{region}
+>https://restcountries.com/v3.1/all  y luego se hace el llamado a los datos por region en el siguiente endpoint   https://restcountries.com/v3.1/region/{region}
 
 este nos entrega toda la informacion de las regiones existentes(continentes) en este caso se procesa la informacion y solo se dejan las distintas regiones(conjunto)
 luego de la solicitud GET desde el servidor HTTP hacia la API REST externa esta misma entrega una respuesta hacia el servidor HTTP nuevamente una vez el servidor procesa la informacion  genera un archivo en la ruta local del proyecto llamado data.json el cual contiene el resultado de los datos solicitados,posteriormente en esta parte del proceso a su vez se guardan las estadisticas de tiempo de procesamiento en milisegundos , esto en la base de datos SQLITE que es creada en la carpeta instance al ejecutar por primera vez el proyecto
