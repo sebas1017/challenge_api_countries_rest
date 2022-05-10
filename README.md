@@ -3,14 +3,37 @@
 
 ![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/main/images_demo/python_http_server.png?raw=true)
 
+
+![alt text](https://github.com/sebas1017/tangelo_challenge_api/blob/main/images_demo/heroku.png?raw=true)
+
+
 Servidor HTTP simple sin uso de frameworks(flask ,django, etc)
 
 Este servidor responde a solicitudes tipo GET de acuerdo a las especificaciones solo tenemos un endpoint el cual a su vez consume una API REST externa para
 la extraccion  y clasifcacion de datos asociados a paises , de acuerdo a esto para poder ejecutar el proyecto debemos hacer lo siguiente
+# INSTALACION [HEROKU-SERVIDOR][CON DOCKER]
+debe tener una cuenta creada en heroku y descargar el cliente de heroku luego:
+    heroku login
+    heroku container:login
+    heroku create api-countries-http  #o el nombre que desee
+    heroku container:push web -a  api-countries-http
+    heroku container:release web -a  api-countries-http  #esto despliega
 
+# INSTALACION [LINUX][CON DOCKER][LOCALMENTE]
+1: tener instalado docker
 
+clonar el proyecto y en la carpeta al nivel del Dockerfile ejecutar el siguiente comando
+> docker build -t api_countries_http .
 
-# INSTALACION [LINUX]
+el punto indica que creara una imagen de docker apartir del Dockerfile que se encuentra
+en la ruta actual donde ejecuta el comando , una vez realizado esto la imagen estara creada
+y podra crear un contenedor de la api con el siguiente comando
+
+> docker run -p 8000:8000 api_countries_http
+
+este comando ejecutara un container de la api , expuesto en el puerto 8000 de la maquina propia
+y por lo tanto ya podra dirigirse a la ruta http://localhost:8000 y al invocar este url en la raiz debe esperar a que cargue la api y podra ver los resultados del procesamiento de datos y si entra al contenedor podra ver que en los archivos , se creo automaticamente data.json y la base de datos sqlite en la ruta instance/tangelo_challenge.sqlite
+# INSTALACION [LINUX][SIN DOCKER][LOCALMENTE]
 requisitos:
 1: tener instalado python 3
 2: tener instalada la libreria para creacion de entornos virtuales en python3 en caso de no tenerla ejecutar sudo apt-get install python3-venv
