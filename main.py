@@ -44,12 +44,17 @@ class ServiceHandler(http.server.SimpleHTTPRequestHandler):
 				for region in regions_data:
 					start_time = time.time()
 					#We wait 2 seconds before making the next request to avoid ip blocks in the API
-					time.sleep(2)
-					response_by_region = json.loads(
-						requests.request("GET", url_countries_by_region.format(region=region), headers=headers).text
-					)
+					response_by_region = requests.get( 
+						url_countries_by_region.format(region=region), headers=headers).json()
 					# we consult the data requested by region
-					country_option = random.randint(0,len(response_by_region)-1)
+					valid = False
+					while valid is False:
+						country_option = random.randint(0,len(response_by_region)-1)
+						if "languages" in list( response_by_region[country_option].keys()):
+							valid = True
+						else:
+							response_by_region.pop(country_option)
+
 					countries.append(response_by_region[country_option]['name']['common'])
 					key_language =  list(response_by_region[country_option]['languages'].keys())[0]
 					hash_languages.append(hashlib.sha1(response_by_region[country_option]['languages'][str(key_language)].encode()).hexdigest())
