@@ -112,7 +112,7 @@ class ServiceHandler(http.server.SimpleHTTPRequestHandler):
 		
 		
 		script_dir_db = os.path.dirname(__file__) # <-- absolute dir the script 
-		rel_path_db = "instance/tangelo_challenge.sqlite"
+		rel_path_db = "instance/database.sqlite"
 		abs_file_path_db = os.path.join(script_dir_db, rel_path_db)
 		try:
 			connection = sqlite3.connect(abs_file_path_db)
